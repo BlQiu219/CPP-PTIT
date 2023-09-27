@@ -1,0 +1,38 @@
+//
+//  main.cpp
+//  CPP0117-TÍNH_TỔNG_CHỮ_SỐ
+//
+//  Created by Nguyễn Thị Hoài Thu on 22/09/2023.
+//
+
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+#include <cstring>
+#include "string"
+#include<algorithm>
+
+using namespace std;
+
+int n;
+
+void solve(){
+    int m = 0;
+    while(n){
+        m += n%10;
+        n /= 10;
+    }
+    n = m;
+}
+
+int main() {
+    int test;
+    cin >> test;
+    while(test--){
+        cin >> n;
+        while(n > 9)
+            solve();
+        cout << n << endl;
+    }
+}
+//qiu
